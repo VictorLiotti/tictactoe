@@ -33,6 +33,7 @@ I built this project to practice object-oriented programming (OOP) and to learn 
     - Alpha–Beta pruning (search optimization)
     - Depth-weighted evaluation (prefer faster wins, delay defeats)
 - Choice of symbol (X or O) and who plays first
-- Replay support
 - Win/draw detection and move validation
+- Customizable victory/defeat/draw messages (from `messages.py`)
+- Replay support
 - Unit tests covering core game logic
