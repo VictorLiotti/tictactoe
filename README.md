@@ -116,7 +116,10 @@ The board is a 3x3 grid numbered from 1 to 9
 
 
 ## Demo
-![Game demo](./assets/demo.gif)
+
+<a href="./assets/demo.gif">
+  <img src="./assets/demo.gif" alt="Game demo" width="480" />
+</a>
 
 
 ## AI
