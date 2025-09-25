@@ -103,16 +103,16 @@ The board is a 3x3 grid numbered from 1 to 9
 
 - The game runs in the terminal (CLI).
 - Choose a game mode:
- - **PvP** — local two-player mode. Player 1 is X and plays first; Player 2 is O.
- - **PvC** — play against the computer:
-  - Choose difficulty: Easy, Normal or Hard.
-   - **Easy** mode: computer plays randomly.
-   - **Normal** mode: computer plays randomly except when an imminent win or loss is detected; in that case it plays optimally.
-   - **Hard** mode: computer uses Minimax (optimal play) with alpha–beta pruning and depth weighting — it will not lose. You can read more about it in [AI](#ai) section.
-  - Choose your symbol (X or O) and who plays first.
+	- **PvP** — local two-player mode. Player 1 is X and plays first; Player 2 is O.
+	- **PvC** — play against the computer:
+		- Choose difficulty: Easy, Normal or Hard.
+			- **Easy** mode: computer plays randomly.
+			- **Normal** mode: computer plays randomly except when an imminent win or loss is detected; in that case it plays optimally.
+			- **Hard** mode: computer uses Minimax (optimal play) with alpha–beta pruning and depth weighting — it will not lose. You can read more about it in [AI](#ai) section.
+		- Choose your symbol (X or O) and who plays first.
 
 - On each turn, the corresponded player type the number of the position where he wants to place his symbol. The board updates in the terminal.
--When the game ends, you will be offered the option to replay.
+- When the game ends, you will be offered the option to replay.
 
 
 ## Demo
