@@ -62,10 +62,9 @@ tictactoe/
 ```
 
 
-## Quick start
+## How to install
 
 1. Clone the repository
-
 ```bash
 git clone git@github.com:VictorLiotti/tictactoe.git
 cd tictactoe
