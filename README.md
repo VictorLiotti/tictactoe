@@ -2,34 +2,34 @@
 
 ![Project Banner](./assets/banner.png)
 
+
 ## Table of Contents
 
 - [About](#about)
-- [Demo](#demo)
 - [Features](#features)
 - [Tech & Concepts](#tech--concepts)
 - [Repository structure](#repository-structure)
-- [Quick start](#quick-start)
+- [How to install](#how-to-install)
 - [How to play](#how-to-play)
+- [Demo](#demo)
 - [AI](#ai)
 - [Running tests](#running-tests)
 - [Next steps](#next-steps)
 - [License](#license)
 - [Author / Contact](#author--contact)
 
+
 ## About
 
 TicTacToe is a clean, well-documented implementation of the classic 3×3 game written in Python.
 I built this project to practice object-oriented programming (OOP) and to learn basic AI concepts — specifically the minimax algorithm.
 
-## Demo
-![Game demo](./assets/demo.gif)
 
 ## Features
 
 - Game modes: Local PvP (Player vs Player) and PvC (Player vs Computer)
-- "Computer" difficulty (Easy / Normal / Hard)
-  - Hard uses Minimax (optimal play) with:
+- Computer difficulty (Easy / Normal / Hard)
+  - **Hard** uses Minimax (optimal play) with:
     - Alpha–Beta pruning (search optimization)
     - Depth-weighted evaluation (prefer faster wins, delay defeats)
 - Choice of symbol (X or O) and who plays first
@@ -38,11 +38,13 @@ I built this project to practice object-oriented programming (OOP) and to learn 
 - Replay option
 - Unit tests covering game logic
 
+
 ## Tech & Concepts
 
 - Language: Python 3.13.6
 - Libraries: `numpy`, `random`, `unittest`
 - Keywords: Command-Line Interface (CLI), turn-based game, Minimax
+
 
 ## Repository structure
 ```
@@ -59,6 +61,7 @@ tictactoe/
 └── LICENSE
 ```
 
+
 ## Quick start
 
 1. Clone the repository
@@ -72,6 +75,7 @@ cd tictactoe
 ```
 python tictactoe.py
 ```
+
 
 ## How to play
 
@@ -87,34 +91,33 @@ The board is a 3x3 grid numbered from 1 to 9
  7 | 8 | 9
 ```
 
+
 ### Rules
 
-Each turn a player chooses an available position on the board to put its symbol there.
-
-Positions marked with a symbol are no longer available.
-
-The player that fills a whole row, column or diagonal with its symbol wins.
-
-If there are no available positions left and nobody won, then its a draw.
+- Each turn a player chooses an available position on the board to put its symbol there.
+- Positions marked with a symbol are no longer available.
+- The first player to fill a full row, column, or diagonal with their symbol wins.
+- If all positions are filled with no winner, then its a draw.
 
 
 ### Playing
 
-The game runs in the terminal (CLI).
+- The game runs in the terminal (CLI).
+- Choose a game mode:
+ - **PvP** — local two-player mode. Player 1 is X and plays first; Player 2 is O.
+ - **PvC** — play against the computer:
+  - Choose difficulty: Easy, Normal or Hard.
+   - **Easy** mode: computer plays randomly.
+   - **Normal** mode: computer plays randomly except when an imminent win or loss is detected; in that case it plays optimally.
+   - **Hard** mode: computer uses Minimax (optimal play) with alpha–beta pruning and depth weighting — it will not lose. You can read more about it in [AI](#ai) section.
+  - Choose your symbol (X or O) and who plays first.
 
-Initially, you will be asked about game mode.
+- On each turn, the corresponded player type the number of the position where he wants to place his symbol. The board updates in the terminal.
+-When the game ends, you will be offered the option to replay.
 
-- If you choose PvP you are ready to go: PvP is local. Player 1 plays first and uses symbol X, Player 2 uses symbol O.
-- If you choose PvC:
- - You will be asked about computer opponent difficulty: Easy, Normal or Hard.
-  - Easy mode: computer plays randomly the whole game.
-  - Normal mode: computer plays randomly untill it identify a trivial play: immenent victory or defeat. In that case it makes the optimum play.
-  - Hard mode: computer uses minimax algorithm to decide the optimum plays all the time. It won't lose. You can read more about it in [AI](#ai) section.
- - You will have to choose which symbol you want to play with (X or O) and who plays first.
 
-On each turn a player chooses an available position on the board and type the corresponding number to place its symbol (X or O) there. The board will be printed on the terminal.
-
-When the game ends, you will can may choose replay for a playing it again.
+## Demo
+![Game demo](./assets/demo.gif)
 
 
 ## AI
@@ -142,6 +145,7 @@ This max–min alternation explains the name **Minimax**.
 
 By default, minimax explores the entire tree. However, many branches can be ignored without changing the result by using **alpha–beta pruning**. Alpha (best already guaranteed for MAX) and beta (best already guaranteed for MIN) act as bounds. If a branch cannot possibly improve the outcome, it is cut off. This greatly reduces the number of nodes explored, making the algorithm faster and more efficient.
 
+
 ## Running tests
 
 This project includes unit tests to validate the game logic.
@@ -168,4 +172,4 @@ This project is MIT licensed.
 
 ## Author / Contact
 
-Víctor L. - [Github](https://github.com/VictorLiotti) - [Linkedin](www.linkedin.com/in/victor-liotti)
+Víctor L. - [Github](https://github.com/VictorLiotti) - [Linkedin](https://www.linkedin.com/in/victor-liotti)
