@@ -37,3 +37,6 @@ I built this project to practice object-oriented programming (OOP) and to learn 
 - Customizable victory/defeat/draw messages (from `messages.py`)
 - Replay support
 - Unit tests covering core game logic
+
+## Tech & Concepts
+
