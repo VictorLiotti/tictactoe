@@ -40,3 +40,22 @@ I built this project to practice object-oriented programming (OOP) and to learn 
 
 ## Tech & Concepts
 
+- Language: Python 3.13.6
+- Libraries: `numpy`, `random`, `unittest`
+- Keywords: Command-Line Interface (CLI), turn-based game, Minimax
+
+## Repository structure
+
+tictactoe/
+├── tictactoe.py # main executable
+├── messages.py # strings/messages used by the CLI
+├── tests/
+│ └── test_tictactoe.py
+├── assets/
+│ ├── demo.gif
+│ └── banner.png
+├── .gitignore
+├── README.md
+└── LICENSE
+
+
