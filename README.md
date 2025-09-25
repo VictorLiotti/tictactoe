@@ -28,15 +28,15 @@ I built this project to practice object-oriented programming (OOP) and to learn 
 ## Features
 
 - Game modes: Local PvP (Player vs Player) and PvC (Player vs Computer)
-- Configurable computer opponent difficulty (Easy / Normal / Hard)
+- "Computer" difficulty (Easy / Normal / Hard)
   - Hard uses Minimax (optimal play) with:
     - Alpha–Beta pruning (search optimization)
     - Depth-weighted evaluation (prefer faster wins, delay defeats)
 - Choice of symbol (X or O) and who plays first
 - Win/draw detection and move validation
 - Customizable victory/defeat/draw messages (from `messages.py`)
-- Replay support
-- Unit tests covering core game logic
+- Replay option
+- Unit tests covering game logic
 
 ## Tech & Concepts
 
@@ -47,15 +47,25 @@ I built this project to practice object-oriented programming (OOP) and to learn 
 ## Repository structure
 
 tictactoe/
+
 ├── tictactoe.py # main executable
+
 ├── messages.py # strings/messages used by the CLI
+
 ├── tests/
+
 │ └── test_tictactoe.py
+
 ├── assets/
+
 │ ├── demo.gif
+
 │ └── banner.png
+
 ├── .gitignore
+
 ├── README.md
+
 └── LICENSE
 
 
