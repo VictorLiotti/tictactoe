@@ -13,7 +13,7 @@
 - [How to play](#how-to-play)
 - [AI](#ai)
 - [Running tests](#running-tests)
-- [Roadmap / Ideas](#roadmap--ideas)
+- [Next steps](#next-steps)
 - [License](#license)
 - [Author / Contact](#author--contact)
 
@@ -127,11 +127,13 @@ At the leaves, scores are assigned: in this project **+10 for a win, –10 for a
 - **Faster wins** (fewer moves) get higher scores, e.g. `10 – depth`.
 - **Slower defeats** (more moves before losing) get less negative scores, e.g. `depth – 10`.
 - Draws remain at 0.
+
 These base values are arbitrary and can be tuned for different games, but the relative order must be preserved — ensuring that, even after depth weighting, **victory > draw > defeat** in all scenarios.
 
 The algorithm then works backwards (backpropagation). Starting from the deepest depth:
 - If it is the **computer’s turn (MAX)**, the node takes the *maximum* value of its children.
 - If it is the **player’s turn (MIN)**, the node takes the *minimum* value of its children.
+
 This alternation continues up the tree until depth 0, where the root node corresponds to the current board. The move leading to the best score at the root is chosen as the optimal play.
 
 This max–min alternation explains the name **Minimax**.  
@@ -140,4 +142,30 @@ This max–min alternation explains the name **Minimax**.
 
 By default, minimax explores the entire tree. However, many branches can be ignored without changing the result by using **alpha–beta pruning**. Alpha (best already guaranteed for MAX) and beta (best already guaranteed for MIN) act as bounds. If a branch cannot possibly improve the outcome, it is cut off. This greatly reduces the number of nodes explored, making the algorithm faster and more efficient.
 
+## Running tests
 
+This project includes unit tests to validate the game logic.
+
+Using unittest (built-in):
+```
+python -m unittest discover -v
+```
+
+## Next steps
+
+> Not necessarily in priority order
+
+- Add GUI (Tkinter, Pygame, or web-based demo).
+- Change difficulty levels for AI by limiting search depth.
+- Add remote online PvP
+- Customizable symbols
+- Separate completly the UI and game engine
+
+## License
+
+This project is MIT licensed.
+
+
+## Author / Contact
+
+Víctor L. - [Github](https://github.com/VictorLiotti) - [Linkedin](www.linkedin.com/in/victor-liotti)
