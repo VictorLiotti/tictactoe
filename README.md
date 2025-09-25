@@ -155,11 +155,11 @@ python -m unittest discover -v
 
 > Not necessarily in priority order
 
-- Add GUI (Tkinter, Pygame, or web-based demo).
-- Change difficulty levels for AI by limiting search depth.
+- Add GUI
+- Change difficulty by limiting search depth.
 - Add remote online PvP
-- Customizable symbols
-- Separate completly the UI and game engine
+- Customizable symbols for players
+- Separate completly the UI and game engine (break tictactoe.py into 2 scripts)
 
 ## License
 
